@@ -1,0 +1,49 @@
+<div class='center'>
+  <form  #UserForm="ngForm" (ngSubmit)="registerUser(UserForm)">
+    <div  class="row">
+      <div  class="col-6">
+        <div  class="form-group">
+            <label  for="text">Nom Prénom</label>
+            <input  name="name" type="text" id="text" placeholder="Alain Posteur" required="required" class="form-control" ngModel>
+            </div>
+          </div>
+          <div  class="col-6">
+            <div  class="form-group">
+              <label  for="select1">Spécialité</label>
+              <select name="specialite" id="select1" class="form-control" ngModel>
+                <option  value="Informatique">Informatique</option>
+                <option  value="Sciences">Sciences</option>
+                <option  value="Mécanique">Mécanique</option>
+                <option  value="Electronique">Electronique</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div  class="row">
+          <div  class="col-6">
+            <div  class="form-group"><label  for="select2">Année</label>
+            <select name="year" multiple="multiple"  id="select2" class="form-control" ngModel>
+              <option  value="1">1</option>
+              <option  value="2">2</option>
+              <option  value="3">3</option>
+              <option  value="4">4</option>
+            </select>
+          </div>
+        </div>
+      <div  class="col-6">
+        <div  class="form-group">
+          <label  for="textarea">Description</label>
+          <textarea name="desc" id="textarea" rows="3" class="form-control" ngModel></textarea>
+        </div>
+      </div>
+    </div>
+    <button  type="submit" class="btn btn-light">Submit</button>
+  </form>
+  <div>
+    <br>
+    <p id="pname"></p>
+    <p id="pspec"></p>
+    <p id="pyear"></p>
+    <p id="pdesc"></p>
+  </div>
+</div>

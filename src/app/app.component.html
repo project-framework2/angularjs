@@ -1,0 +1,39 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Framework AngularJs</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Accueil<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/carrousel">Carrousel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/formulaire">Formulaire</a>
+      </li>
+    </ul>
+    <div> Hello {{name}}</div>
+    <li class="nav-item dropdown">
+      <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle my-2 my-lg-0"> Login </a>
+      <form ng-controller="inputController" class=" dropdown-menu p-4 dropdown-menu-right ">
+      <div class="form-inline">
+        <label for="email">Email address</label>
+        <input type="email" #box (keyup)="onKey(box.value)" placeholder="email@example.com" required="required" class="form-control">
+      </div>
+      <div class="form-inline"><label for="password">Password</label>
+        <input type="password" [(ngModel)]="password" placeholder="Password" required="required" class="form-control">
+      </div>
+      <div class="form-check"><input type="checkbox" id="checklogin" class="form-check-input">
+        <label for="checklogin" class="form-check-label"> Se souvenir de moi </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in</button></form></li><li class="nav-item"><a href="#" class="nav-link disabled">Logout</a>
+    </li>
+  </div>
+</nav>
+<div class="page-content">
+  <router-outlet></router-outlet> 
+</div>
